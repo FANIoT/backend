@@ -83,8 +83,8 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/I1820/types"
+  name = "github.com/FANIoT/types"
 
 [[constraint]]
   branch = "master"
-  name = "github.com/I1820/pm"
+  name = "github.com/FANIoT/pm"

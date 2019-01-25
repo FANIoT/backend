@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/I1820/backend/models"
+	"github.com/FANIoT/backend/models"
 	"github.com/gobuffalo/buffalo"
 	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo/findopt"

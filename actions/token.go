@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/I1820/backend/models"
+	"github.com/FANIoT/backend/models"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/gobuffalo/envy"
 )
@@ -57,7 +57,7 @@ func NewRefreshToken(id string, untilExpire time.Duration) (string, error) {
 	return encodedToken, nil
 }
 
-// RefreshClaims contains required information in I1820 platform to
+// RefreshClaims contains required information in FANIoT platform to
 // refresh a user access token.
 type RefreshClaims struct {
 	ID  string
@@ -74,7 +74,7 @@ func (rc RefreshClaims) Valid() error {
 	return nil
 }
 
-// UserClaims contains required information in I1820 platform
+// UserClaims contains required information in FANIoT platform
 // for logged in user.
 type UserClaims struct {
 	U   models.User

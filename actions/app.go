@@ -14,7 +14,7 @@ import (
 	"github.com/unrolled/secure"
 	validator "gopkg.in/go-playground/validator.v9"
 
-	"github.com/I1820/types"
+	"github.com/FANIoT/types"
 	"github.com/gobuffalo/x/sessions"
 	"github.com/rs/cors"
 )

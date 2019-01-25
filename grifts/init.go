@@ -1,7 +1,7 @@
 package grifts
 
 import (
-	"github.com/I1820/backend/actions"
+	"github.com/FANIoT/backend/actions"
 	"github.com/gobuffalo/buffalo"
 )
 

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: I1820 API
-  description: I1820, IoT Platform that can be used with LoRa, Zigbee and ... . Supported by Avidnet Technology.
+  title: FANIoT API
+  description: FANIoT, IoT Platform that can be used with LoRa, Zigbee and ... . Supported by Avidnet Technology.
   version: "3.0.0"
   contact:
     name: Parham Alvani
@@ -11,7 +11,7 @@ info:
     url: https://www.gnu.org/licenses/gpl-3.0.en.html
   x-externalDocs:
     description: Find out more
-    url: https://I1820.github.io
+    url: https://FANIoT.github.io
 
 servers:
   - url: /api/v1

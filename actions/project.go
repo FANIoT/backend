@@ -14,8 +14,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/I1820/backend/models"
-	pmmodels "github.com/I1820/pm/models"
+	"github.com/FANIoT/backend/models"
+	pmmodels "github.com/FANIoT/pm/models"
 	"github.com/gobuffalo/buffalo"
 	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo/findopt"
@@ -47,7 +47,7 @@ func (v ProjectsResource) List(c buffalo.Context) error {
 	}
 
 	// gets all projects from pm
-	// I1820/pm/ProjectsResource.List
+	// FANIoT/pm/ProjectsResource.List
 	resp, err := pmclient.R().SetResult(&ps).Get("api/projects")
 	if err != nil {
 		return c.Error(http.StatusInternalServerError, err)
@@ -89,7 +89,7 @@ func (v ProjectsResource) Create(c buffalo.Context) error {
 	var p pmmodels.Project
 
 	// creates a project in pm with `projectReq`
-	// I1820/pm/ProjectsResource.Create
+	// FANIoT/pm/ProjectsResource.Create
 	resp, err := pmclient.R().SetBody(map[string]interface{}{
 		"name":  rq.Name,
 		"owner": u.Email,
@@ -135,7 +135,7 @@ func (v ProjectsResource) Show(c buffalo.Context) error {
 			var p pmmodels.Project
 
 			// shows a project from pm
-			// I1820/pm/ProjectsResource.Show
+			// FANIoT/pm/ProjectsResource.Show
 			resp, err := pmclient.R().SetResult(&p).SetPathParams(map[string]string{
 				"projectID": projectID,
 			}).Get("api/projects/{projectID}")
@@ -170,7 +170,7 @@ func (v ProjectsResource) Destroy(c buffalo.Context) error {
 			var p pmmodels.Project
 
 			// removes a thing from pm
-			// I1820/pm/ThingsResource.Destroy
+			// FANIoT/pm/ThingsResource.Destroy
 			resp, err := pmclient.R().SetResult(&p).SetPathParams(map[string]string{
 				"projectID": projectID,
 			}).Delete("api/projects/{projectID}")

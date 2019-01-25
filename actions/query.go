@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/I1820/backend/models"
+	"github.com/FANIoT/backend/models"
 	"github.com/gobuffalo/buffalo"
 )
 
@@ -45,7 +45,7 @@ func QueryHandler(c buffalo.Context) error {
 		if p == projectID {
 			var result interface{}
 			// do query
-			// I1820/dm/
+			// FANIoT/dm/
 			resp, err := dmclient.R().SetBody(rq).SetResult(&result).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,

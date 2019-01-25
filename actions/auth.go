@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/I1820/backend/models"
+	"github.com/FANIoT/backend/models"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/gobuffalo/buffalo"
 	"github.com/gobuffalo/envy"

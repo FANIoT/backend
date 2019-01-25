@@ -16,7 +16,7 @@ package actions
 import (
 	"fmt"
 
-	"github.com/I1820/backend/models"
+	"github.com/FANIoT/backend/models"
 )
 
 const iKey = "hello"

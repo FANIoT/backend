@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/I1820/backend/models"
-	"github.com/I1820/types"
+	"github.com/FANIoT/backend/models"
+	"github.com/FANIoT/types"
 	"github.com/gobuffalo/buffalo"
 )
 
@@ -43,7 +43,7 @@ func (v ThingsResource) List(c buffalo.Context) error {
 			var ts []types.Thing
 
 			// gets project things from pm
-			// I1820/pm/ThingsResource.List
+			// FANIoT/pm/ThingsResource.List
 			resp, err := pmclient.R().SetResult(&ts).SetPathParams(map[string]string{
 				"projectID": projectID,
 			}).Get("api/projects/{projectID}/things")
@@ -84,7 +84,7 @@ func (v ThingsResource) Create(c buffalo.Context) error {
 			var t types.Thing
 
 			// creates a thing in pm
-			// I1820/pm/ThingsResource.Create
+			// FANIoT/pm/ThingsResource.Create
 			resp, err := pmclient.R().SetBody(rq).SetResult(&t).SetPathParams(map[string]string{
 				"projectID": projectID,
 			}).Post("api/projects/{projectID}/things")
@@ -120,7 +120,7 @@ func (v ThingsResource) Show(c buffalo.Context) error {
 			var t types.Thing
 
 			// fetches a thing from pm
-			// I1820/pm/ThingsResource.Show
+			// FANIoT/pm/ThingsResource.Show
 			resp, err := pmclient.R().SetResult(&t).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,
@@ -157,7 +157,7 @@ func (v ThingsResource) Destroy(c buffalo.Context) error {
 			var b bool
 
 			// removes a thing from pm
-			// I1820/pm/ThingsResource.Destroy
+			// FANIoT/pm/ThingsResource.Destroy
 			resp, err := pmclient.R().SetResult(&b).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,
@@ -196,7 +196,7 @@ func (v ThingsResource) Tokens(c buffalo.Context) error {
 			var t types.Thing
 
 			// do token request
-			// I1820/pm/TokensRequest
+			// FANIoT/pm/TokensRequest
 			resp, err := pmclient.R().SetResult(&t).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,
@@ -242,7 +242,7 @@ func (v ThingsResource) Assets(c buffalo.Context) error {
 			var t types.Thing
 
 			// do asset request
-			// I1820/pm/AssetsRequest
+			// FANIoT/pm/AssetsRequest
 			resp, err := pmclient.R().SetBody(rq).SetResult(&t).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,
@@ -288,7 +288,7 @@ func (v ThingsResource) Connectivities(c buffalo.Context) error {
 			var t types.Thing
 
 			// do asset request
-			// I1820/pm/ConnecitivyRequest
+			// FANIoT/pm/ConnecitivyRequest
 			resp, err := pmclient.R().SetBody(rq).SetResult(&t).SetPathParams(map[string]string{
 				"projectID": projectID,
 				"thingID":   thingID,
